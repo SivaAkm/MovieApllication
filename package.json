@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://SivaAkm.github.io/JetFlixFlims",
+  "homepage": "https://SivaAkm.github.io/MovieApllication",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
