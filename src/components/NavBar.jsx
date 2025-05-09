@@ -11,8 +11,8 @@ function NavBar() {
                     <Link to="/">JetFlix Flims</Link>
                 </div>
                 <div className="navbar-links">
-                    <Link to="/Home" className="nav-link">Home</Link>
-                    <Link to="/MyFavorites" className="nav-link">Favorites</Link>
+                    <Link to={process.env.PUBLIC_URL +"/Home"} className="nav-link">Home</Link>
+                    <Link to={process.env.PUBLIC_URL +"/MyFavorites"} className="nav-link">Favorites</Link>
                 </div>
             </nav>
             

@@ -10,9 +10,9 @@ function App() {
     <NavBar/>
      
     <Routes>
-      <Route path = "/" element={<HomePage/>}/>
-      <Route path = "/Home" element={<HomePage/>}/>
-      <Route path = "/MyFavorites" element={<Favorites/>}/>
+      <Route path = {process.env.PUBLIC_URL + "/"} element={<HomePage/>}/>
+      <Route path = {process.env.PUBLIC_URL +"/Home"} element={<HomePage/>}/>
+      <Route path = {process.env.PUBLIC_URL +"/MyFavorites"} element={<Favorites/>}/>
     </Routes>
       
       </MovieProvider>
