@@ -1,0 +1,139 @@
+.Movie-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #b63535;
+  transition: transform 0.2s;
+  height: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  border: 1.5px solid black;
+}
+.Movie-image{
+  width: 100%;
+  aspect-ratio: 2/ 3;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+.lazy-load-image-background {
+  display: block !important; /* or flex/grid, depending on your layout */
+  width: 100%;
+  height: 100%;
+}
+.Movie-card:hover {
+  transform: translateY(-5px);
+}
+
+.Movie-poster {
+  position: relative;
+  aspect-ratio: 2/3;
+  width: 100%;
+}
+
+.Movie-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Movie-Overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.8)
+  );
+  opacity: 0;
+  transition: opacity 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.Movie-card:hover .Movie-Overlay {
+  opacity: 1;
+}
+
+.Favorite-Button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: rgb(154, 38, 38);
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+
+.Favorite-Button:hover {
+  background-color: rgba(245, 243, 243, 0.8);
+}
+
+.Favorite-Button.active {
+  color: #000000;
+}
+
+.rating-select {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.Movie-Info {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.Movie-Info h3 {
+  font-size: 1rem;
+  margin: 0;
+  color: white;
+
+}
+
+.Movie-Info p {
+  color: #f3ecec;
+  font-size: 0.9rem;
+}
+
+.user-rating {
+  color: #ffd700;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+@media (max-width: 768px) {
+  .Movie-card {
+    font-size: 0.9rem;
+  }
+
+  .Movie-Info {
+    padding: 0.75rem;
+  }
+
+  .Favorite-Button {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+  }
+}
